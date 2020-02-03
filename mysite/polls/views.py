@@ -10,6 +10,13 @@ def index(request):
     context = {'latest_question_list': latest_question_list}
     return render(request, 'polls/index.html', context)
 
+"""
+The render() function takes the request object as its first argument, 
+a template name as its second argument and a dictionary as its optional 
+third argument. It returns an HttpResponse object of the given template 
+rendered with the given context.
+"""
+
 def detail(request, question_id):
     return HttpResponse("You're looking at question %s." % question_id)
 
